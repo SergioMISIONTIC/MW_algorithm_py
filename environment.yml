@@ -1,0 +1,42 @@
+# Conda environment configuration file
+# To create the environment, run:
+# conda env create -f environment.yml
+# To activate the environment, run:
+# conda activate tavoramw_spm
+
+name: tavora_mw_spm
+
+channels:
+  - conda-forge
+  - nvidia # Required for cupy and cudatoolkit
+
+dependencies:
+  # Python version
+  - python=3.10
+
+  # Core scientific computing libraries
+  - numpy
+  - scipy
+  - pandas
+
+  # Geospatial and Earth Observation
+  - netcdf4
+  - xarray
+  - geopandas
+  - rasterio
+  - earthengine-api
+  - openeo
+
+  # Machine Learning
+  - scikit-learn
+
+  # GPU computing with CuPy
+  # Conda will automatically select a compatible CUDA toolkit version
+  - cupy
+  - cudatoolkit
+
+  # Utilities
+  - requests
+
+  # Development environment
+  - jupyterlab
