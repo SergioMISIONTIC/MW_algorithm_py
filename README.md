@@ -15,5 +15,11 @@ This version calls temperature data from two possible data sources: the Google E
 
 The 'MW_algorithm' function will run in two steps: the first step estimating SPM and uncertaintyes and the second step constraining shape parameter and mass-specific coefficients.
 
+This project provides two versions of the algorithm, each optimized for different hardware:
+
+GPU Version (MW_algorithm_py_GPU.ipynb): ⚡ This version is significantly faster but requires a system with a dedicated GPU and consumes more RAM resources.
+
+Memory Mapping Version (MW_algorithm_py.ipynb): 💾 This version uses memory mapping to conserve system resources, making it suitable for computers without a GPU. However, it takes significantly longer to process the data.
+
 # Questions and Suggestions
 For questions regarding the script implementation or to suggest changes to improve its functionality, please contact Sergio Carenas at sergio.molano@ufrgs.br
