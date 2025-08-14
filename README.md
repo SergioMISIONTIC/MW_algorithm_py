@@ -2,8 +2,10 @@
 Python code for the retrievals of SPM and its associated uncertainties.
 This module provides notebooks with functions to derived SPM and associated uncertianties from satellite imagery of remote sensing reflectance at any spectral resolution or sensor, nevertheless, default configuration is set for Sentinel-3 OLCI. This is likely not the fastest implementation possible for the MW algorithm. However, it is easy to use and handles the processing of either multispectral and hyperspectral remote sensing reflectance data.
 
-#Setting the input data
+# Setting the input data
 The input to use this version of the algorithm must be satellite images of water bodies in NetCDF format (.nc) containing atmospherically corrected bands in remote sensing reflectance (rrs).
+
+You can run the notebooks in either a local Jupyter Lab environment or on Google Colab. For a local setup, the most reliable method is to create a Conda environment using the provided environment.yml file, which installs all necessary dependencies. If using Google Colab, the notebook contains cells to install the required libraries directly. For Colab, you must also mount your Google Drive and ensure your satellite image files (.nc) are stored in a folder within your Drive to be accessible by the notebook.
 
 To facilitate understanding of the algorithm, a sample of two Sentinel-3 OLCI satellite images with remote sensing reflectance (rrs) bands is included in the SAMPLE_DATA folder.
 
@@ -13,5 +15,5 @@ This version calls temperature data from two possible data sources: the Google E
 
 The 'MW_algorithm' function will run in two steps: the first step estimating SPM and uncertaintyes and the second step constraining shape parameter and mass-specific coefficients.
 
-#Questions and Suggestions
+# Questions and Suggestions
 For questions regarding the script implementation or to suggest changes to improve its functionality, please contact Sergio Carenas at sergio.molano@ufrgs.br
